@@ -1,16 +1,17 @@
 def collatz():
     global e
-    if (int(e) % 2) == 0:
+    if int(e) % 2 == 0:
         print(e, ' is even')
         e = int(e) / 2
         return e
     else:
         print(e, ' it`s odd')
-        e = (int(e) * 3 + 1)
+        e = int(e) * 3 + 1
         return e
 
 print('pass a value')
-e = (input())
+e = int(input())
+
 is_int=True
 try:
     int(e)
