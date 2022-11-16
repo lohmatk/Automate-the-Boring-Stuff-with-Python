@@ -10,7 +10,7 @@ def collatz():
         return e
 
 print('pass a value')
-e = int(input())
+e = input()
 
 is_int=True
 try:
@@ -26,3 +26,4 @@ if is_int:
         print(' "1" achieved, by', counter, 'steps')
 else:
     print("OPEN YOUR EYES!!!!")
+#
