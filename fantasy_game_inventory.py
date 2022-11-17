@@ -64,5 +64,7 @@ def addToInventory(basicDict, addedItems):
     print('New dict: ', basicDict, '\n')
 
 addToInventory(itemsAll, dragonLoot)
+
 displayInventory(itemsAll)
+
 
