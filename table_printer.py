@@ -24,26 +24,28 @@
 #
 # table_printer(tableData)
 
-"""поправил код просто поеняв местами переменные в цикле"""
+"""поправил код просто поменяв местами переменные в цикле"""
 #
 tableData = [['apples', 'oranges', 'cherries', 'banans'],
              ['Alice', 'Bob', 'Carol', 'David'],
              ['dogs', 'cats', 'moose', 'goose']]
 
-def table_printer(datalist):
-    m_list = []
+def maxWidth_picker(datalist):
+    m_list = []                     # list of max values
     for k in range(len(datalist)):
-        list_val = []
+        list_val = []               #list of each values from inner lists to pick max of them
         for i in range(len(datalist[0])):
             list_val.append(len(tableData[k][i]))
         m = max(list_val)
-        m_list.append(m) # сложил максимальные значения в список и распечатал его просто так
-    print(m_list)
+        m_list.append(m)
+    return m_list
 
-    for h in range(len(datalist[0])):
-        for t in range(len(datalist)):
-            print(datalist[t][h].rjust(m_list[t]), end=' ')
+def table_printer(source_list, maxWidth_list ):
+    for h in range(len(source_list[0])):
+        for t in range(len(source_list)):
+            print(source_list[t][h].rjust(maxWidth_list[t]), end=' ')
         print()
 
 
-table_printer(tableData)
+widths = maxWidth_picker(tableData)
+table_printer(tableData, widths)
